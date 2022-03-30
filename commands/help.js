@@ -9,11 +9,11 @@ const execute = async (client,msg,args) => {
         commands.forEach((command) => {
             if(!command.isDependent){
                 if(command.commandType === 'admin')
-                    adminHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
+                    adminHelp += `*😴${command.name} (${command.command})*  - ${command.description}\n\n`;
                 if(command.commandType === 'info')
-                    infoHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
+                    infoHelp += `*🥲${command.name} (${command.command})*  - ${command.description}\n\n`;
                 if(command.commandType === 'plugin')
-                    pluginHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
+                    pluginHelp += `*🥰${command.name} (${command.command})*  - ${command.description}\n\n`;
             }
                 
         });
