@@ -3,17 +3,17 @@ const execute = async (client,msg,args) => {
     msg.delete(true);
     let commands =  client.commands;
     if(!args.length){
-        let adminHelp = '🔱 *Administration*\n\n';
-        let infoHelp = '🔱 *Info*\n\n';
-        let pluginHelp = '🔱 *Plugins*\n\n';
+        let adminHelp = '*Administration*\n\n';
+        let infoHelp = '*Info*\n\n';
+        let pluginHelp = '*Plugins*\n\n';
         commands.forEach((command) => {
             if(!command.isDependent){
                 if(command.commandType === 'admin')
-                    adminHelp += `⭐ *${command.name} (${command.command})*  - ${command.description}\n`;
+                    adminHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
                 if(command.commandType === 'info')
-                    infoHelp += `⭐ *${command.name} (${command.command})*  - ${command.description}\n`;
+                    infoHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
                 if(command.commandType === 'plugin')
-                    pluginHelp += `⭐ *${command.name} (${command.command})*  - ${command.description}\n`;
+                    pluginHelp += `*${command.name} (${command.command})*  - ${command.description}\n`;
             }
                 
         });
